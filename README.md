@@ -12,7 +12,7 @@ After installing necessary tools as mentioned [here](https://fly.io/dist-sys/1/)
 # for running the echo exercise
 $ just echo
 
-# for debugging maelstorm
+# for debugging maelstrom
 $ just debug
 ```
 
