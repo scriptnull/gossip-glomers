@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 
 	maelstrom "github.com/jepsen-io/maelstrom/demo/go"
@@ -17,7 +18,8 @@ func main() {
 			return err
 		}
 
-		// TODO
+		body["type"] = "generate_ok"
+		body["id"] = fmt.Sprintf("%s-%f", msg.Dest, body["msg_id"])
 
 		return n.Reply(msg, body)
 	})
